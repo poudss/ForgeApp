@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,9 +29,11 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 252, 63, 0),
+        ),
       ),
-      home: const MyHomePage(title: 'You aint work a ay in your life'),
+      home: const HomePage(),
     );
   }
 }
@@ -65,6 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
     });
+    // this line sucks
   }
 
   @override
